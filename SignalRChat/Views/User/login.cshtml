@@ -1,0 +1,116 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Login Page</title>
+    <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: sans-serif;
+                    letter-spacing: 1px;
+                    background: url(bg.jpg);
+                    background-size: cover;
+                }
+
+                .login {
+                    border: 1px solid #4bc970;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 340px;
+                    height: 400px;
+                    padding: 80px 40px;
+                    box-sizing: border-box;
+                    background: rgba(0, 0, 0, .8);
+                }
+
+                .login:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 100%;
+                    background: rgba(255, 255, 255, .1);
+                    pointer-events: none;
+                }
+
+                h2 {
+                    margin: 0;
+                    padding: 0 0 20px;
+                    color: #4bc970;
+                    text-align: center;
+                }
+
+                .login p {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                    color: #fff;
+                }
+
+                .login input {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .login input[type="email"],
+                .login input[type="password"] {
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    background: transparent;
+                    outline: none;
+                    color: #fff;
+                    font-size: 16px;
+                    height: 40px;
+                }
+
+                .login input[type="submit"] {
+                    border: none;
+                    outline: none;
+                    color: #262626;
+                    background: #4bc970;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+
+                .login input[type="submit"]:hover {
+                    background: #81d99a;
+                    color: #262626;
+                }
+
+                .login a {
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+
+                .login a:hover {
+                    color: #4bc970;
+                }
+    </style>
+</head>
+<body>
+    <form id="form" asp-controller="user" asp-action="login" method="post">
+        <div class="login">
+            <h2>Log In</h2>
+            <p>Email address</p>
+            <input type="email" id="txtEmail" required="required" placeholder="Enter Email" runat="server" />
+            <p>Password</p>
+            <input type="password" id="txtPassword" required="required" placeholder="••••••••" autocomplete="off" />
+            <input type="submit" id="btnLogin" value="Login" />
+            <a href="Register.aspx">Registration New</a>
+        </div>
+    </form>
+</body>
+</html>

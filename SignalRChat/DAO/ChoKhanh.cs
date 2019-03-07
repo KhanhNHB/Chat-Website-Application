@@ -7,5 +7,6 @@ namespace SignalRChat.DAO
 {
     public class ChoKhanh
     {
+        public int MyProperty { get; set; }
     }
 }
